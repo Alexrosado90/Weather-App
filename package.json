@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Alexrosado90/Weather-App/issues"
   },
-  "homepage": "https://github.com/Alexrosado90/Weather-App#readme"
+  "homepage": "https://github.com/Alexrosado90/Weather-App#readme",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.5"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "pg": "^7.6.0"
+  }
 }
