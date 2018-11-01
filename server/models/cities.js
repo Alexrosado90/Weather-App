@@ -1,8 +1,8 @@
 const db = require('../database');
 
-class cities {
+class Cities {
     static retrieveAll (callback) {
-        db,MediaQueryList('SELECT city_name from cities', function (err, res) {
+        db.query('SELECT city_name from cities', function (err, res) {
             if (err.error)
             return callback(err);
             callback(res);
@@ -18,4 +18,4 @@ class cities {
     }
 }
 
-module.exports = cities;
+module.exports = Cities;

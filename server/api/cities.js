@@ -1,10 +1,10 @@
 let express = require('express');
-let cities = require('../models/cities');
+let Cities = require('../models/cities');
 
 let router = express.Router();
 
 router.get('/', function (req, res) {
-    cities.retrieveAll(function (err, cities) {
+    Cities.retrieveAll(function (err, cities) {
         if (err)
         return res.json(err);
         return res.json(cities);
@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
 router.post('/', function (req, res) {
     let city = req.body.city;
 
-    cities.insert(city, function (err, result) {
+    Cities.insert(city, function (err, result) {
         if (err)
         return res.json(err);
         return res.json(result)
