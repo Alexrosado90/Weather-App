@@ -16,8 +16,26 @@ const Weather = (props) => {
           <span>{Math.floor(data.main.temp)}&deg;F</span>
           <Table>
               <tbody>
+                <tr>
                   <td>Wind</td>
                   <td>{Math.floor(data.wind.speed)} km/h</td>
+                </tr>
+                <tr>
+                  <td>Pressure</td>
+                  <td>{Math.floor(data.main.pressure)} hPa</td>
+                </tr>
+                <tr>
+                  <td>Humidity</td>
+                  <td>{Math.floor(data.main.humidity)} %</td>
+                </tr>
+                <tr>
+                  <td>Min Temp</td>
+                  <td>{Math.floor(data.main.temp_min)}&deg;F</td>
+                </tr>
+                <tr>
+                  <td>Max Temp</td>
+                  <td>{Math.floor(data.main.temp_max)}&deg;F</td>
+                </tr>
               </tbody>
           </Table>
         </Col>
