@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col,Table } from 'reactstrap';
 
 const Weather = (props) => {
-    const { data, } = props;
+    const { data } = props;
 
     if (!data)
     return <div></div>
@@ -36,10 +36,6 @@ const Weather = (props) => {
                   <td>Max Temp</td>
                   <td>{Math.floor(data.main.temp_max)}&deg;F</td>
                 </tr>
-                <tr>
-                    <td>{data.list.dt[0].temp}</td>
-                    <td>{data.list.dt[1].temp}</td>
-                    </tr>
               </tbody>
           </Table>
         </Col>

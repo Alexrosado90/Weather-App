@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Weather from './Weather';
+import Forecast from './Forecast';
 import  {
   Container,
   Navbar,
@@ -61,6 +62,14 @@ getWeather = (city) => {
   });
 }
 
+getForecast = (city) => {
+  fetch(`/api/forecast/${city}`)
+  .then(res => res.json())
+  .then(weather => {
+    this.setState({ weather });
+  });
+}
+
 handleChangeCity = (e) => {
   this.getWeather(e.target.value)
 }
@@ -109,6 +118,7 @@ handleChangeCity = (e) => {
         </Col>
         </Row>
         <Weather data={this.state.weather} />
+        <Forecast data={this.state.weather} />
       </Container>
     );
   }
